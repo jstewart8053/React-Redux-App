@@ -3,12 +3,12 @@ import { connect } from "react-redux";
 import Product from "./Product";
 
 function ProductFacts(props) {
-    reutrn(
+    return (
         <>
             <h3> Product Facts </h3>
 
             {props.facts.map((fact) => {
-                return <Fact key={fact._id} fact={fact} />;
+                return <Product key={fact._id} product={product} />;
             })}
         </>
     );

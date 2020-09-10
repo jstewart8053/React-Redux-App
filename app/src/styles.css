@@ -1,0 +1,19 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Patua One", cursive;
+  background-image: url("https://c0.wallpaperflare.com/preview/230/690/525/background-beverage-bubble-caffeine.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+
+h1,
+h2 {
+  background-color: white;
+  padding: 5px;
+  border-radius: 8px;
+}

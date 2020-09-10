@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./styles.css";
-import Product from "./components/Product";
+import ProductFacts from "./components/ProductFacts";
 import { connect } from "react-redux";
 import { fetchProducts } from "./store/actions"
 
@@ -18,7 +18,8 @@ function App({ fetchProducts, loadingProducts, errorMessage }) {
       <span> 📈 </span>
       </h1>
       <h2> Where we will be introducing and reviewing the most anticipated beverages </h2>
-      <span> 🥤 </span>
+      {!loadingProducts ? <ProductFacts /> : <div>... Fetching Product Facts </div>}
+      {errorMessage !== "" ? <div> {errorMessage} </div> : null}
     </div>
   )
 
