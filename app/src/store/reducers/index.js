@@ -7,7 +7,8 @@ import {
 const initialState = {
     products: [],
     loadingProducts: true,
-    errorMessage: ""
+    errorMessage: "",
+
 };
 
 export default (state = initialState, action) => {
@@ -26,7 +27,7 @@ export default (state = initialState, action) => {
         case FETCH_PRODUCTS_SUCCESS:
             return {
                 ...state,
-                PRODUCTS: action.payload,
+                products: action.payload,
                 loadingProducts: false
             };
         default:

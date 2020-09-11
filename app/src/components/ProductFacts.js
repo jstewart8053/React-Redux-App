@@ -5,18 +5,22 @@ import Product from "./Product";
 function ProductFacts(props) {
     return (
         <>
-            <h3> Product Facts </h3>
 
-            {props.facts.map((fact) => {
-                return <Product key={fact._id} product={product} />;
-            })}
+            <section>
+                {props.products.map((product) => {
+                    return <Product key={product._id} product={product}
+
+                    />;
+
+                })}
+            </section>
         </>
     );
 }
 
 function mapStateToProps(state) {
     return {
-        facts: state.facts
+        products: state.products
     };
 }
 

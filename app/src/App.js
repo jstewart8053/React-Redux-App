@@ -17,7 +17,7 @@ function App({ fetchProducts, loadingProducts, errorMessage }) {
         Welcome to Report of the Week!
       <span> 📈 </span>
       </h1>
-      <h2> Where we will be introducing and reviewing the most anticipated beverages </h2>
+      <h2> Where you can easily find ratings for the most anticipated beverages from your favorite eateries </h2>
       {!loadingProducts ? <ProductFacts /> : <div>... Fetching Product Facts </div>}
       {errorMessage !== "" ? <div> {errorMessage} </div> : null}
     </div>

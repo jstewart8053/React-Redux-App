@@ -9,9 +9,10 @@ export const fetchProducts = () => {
     return (dispatch) => {
         dispatch({ type: FETCH_PRODUCTS });
         axios
-            .get("https://thereportoftheweek-api.herokuapp.com/reports?between=2018-1-1%7C2020-1-1")
+            .get("https://thereportoftheweek-api.herokuapp.com/reports?between=2018-1-1%7C2018-12-1")
             .then((response) => {
-                dispatch({ type: FETCH_PRODUCTS_SUCCESS, payload: response.data.all });
+                console.log(response.data)
+                dispatch({ type: FETCH_PRODUCTS_SUCCESS, payload: response.data });
             })
             .catch((error) => {
                 dispatch({
